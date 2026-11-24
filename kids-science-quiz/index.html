@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>小小科学家问答</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="app">
+    <section id="screen-start" class="screen">
+      <div class="badge" aria-hidden="true">?</div>
+      <h1 id="title">小小科学家问答</h1>
+      <p class="lead">一次一道题，选出你觉得对的答案吧！</p>
+      <p id="bank-info" class="muted"></p>
+      <p id="progress-snapshot" class="muted"></p>
+      <button id="btn-start" class="btn btn-primary" type="button">开始答题</button>
+      <button id="btn-records" class="btn btn-secondary" type="button">我的记录</button>
+      <div id="bank-errors" class="errors" hidden></div>
+    </section>
+
+    <section id="screen-question" class="screen" hidden>
+      <div class="topbar">
+        <span id="q-counter"></span>
+        <span id="q-score"></span>
+      </div>
+      <div class="bar" aria-hidden="true"><div id="q-bar" class="bar-fill"></div></div>
+      <p id="q-topic" class="topic"></p>
+      <h2 id="q-text" class="question"></h2>
+      <div id="q-options" class="options" role="group" aria-label="选项"></div>
+      <div id="q-feedback" class="feedback" hidden aria-live="polite">
+        <p id="fb-title" class="fb-title"></p>
+        <p id="fb-answer" class="fb-answer"></p>
+        <p id="fb-explanation" class="fb-explanation"></p>
+        <button id="btn-next" class="btn btn-primary" type="button">下一题</button>
+      </div>
+    </section>
+
+    <section id="screen-end" class="screen" hidden>
+      <h2>答题完成！</h2>
+      <p id="end-stars" class="stars" aria-hidden="true"></p>
+      <p id="end-score" class="big-score"></p>
+      <p id="end-message" class="lead"></p>
+      <div id="end-missed" class="missed" hidden>
+        <h3>再看一看这些题：</h3>
+        <ul id="end-missed-list"></ul>
+      </div>
+      <p id="end-save-note" class="muted" hidden>这台设备不能保存记录，但这次的成绩依然很棒！</p>
+      <button id="btn-again" class="btn btn-primary" type="button">再玩一次</button>
+      <button id="btn-home" class="btn btn-secondary" type="button">回到首页</button>
+    </section>
+
+    <section id="screen-records" class="screen" hidden>
+      <h2>我的记录</h2>
+      <dl class="stats">
+        <div><dt>玩了几次</dt><dd id="rec-plays"></dd></div>
+        <div><dt>最好成绩</dt><dd id="rec-best"></dd></div>
+        <div><dt>答对率</dt><dd id="rec-rate"></dd></div>
+      </dl>
+      <h3>最近几次</h3>
+      <ul id="rec-history" class="history"></ul>
+      <button id="btn-records-home" class="btn btn-primary" type="button">回到首页</button>
+      <button id="btn-reset" class="btn btn-link" type="button">清除记录（家长）</button>
+    </section>
+  </main>
+  <script src="questions.js"></script>
+  <script src="quiz-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Sentence bank · Cantonese Coach</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">廣東話 Coach</a>
+  <nav>
+    <a href="daily.html">每日 Daily</a>
+    <a href="dialogues.html">對話 Dialogues</a>
+    <a href="bank.html" aria-current="page">句庫 Bank</a>
+  </nav>
+</header>
+<main>
+<h1>句庫 <small class="muted">Sentence bank</small></h1>
+<section id="voice"></section>
+<section class="controls">
+  <input id="q" type="search" placeholder="Search 中文 / jyutping / English" aria-label="Search">
+  <select id="cat" aria-label="Category"><option value="">All topics</option></select>
+  <select id="status" aria-label="Status">
+    <option value="">Any status</option>
+    <option value="new">New</option>
+    <option value="practised">Practised</option>
+    <option value="again">再練 Again</option>
+    <option value="mastered">識講 Got it</option>
+  </select>
+  <span id="count" class="muted"></span>
+</section>
+<section id="bank-list"></section>
+</main>
+<footer class="foot muted">Practice tool. Audio uses your browser's built-in Cantonese voice (Web Speech API). Progress is stored only in this browser.</footer>
+<script src="data/categories.js"></script>
+<script src="data/sentences.js"></script>
+<script src="data/dialogues.js"></script>
+<script src="js/store.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/bank.js"></script>
+</body>
+</html>

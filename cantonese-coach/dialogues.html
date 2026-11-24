@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Interview dialogues · Cantonese Coach</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">廣東話 Coach</a>
+  <nav>
+    <a href="daily.html">每日 Daily</a>
+    <a href="dialogues.html" aria-current="page">對話 Dialogues</a>
+    <a href="bank.html">句庫 Bank</a>
+  </nav>
+</header>
+<main>
+<h1>面試對話 <small class="muted">Interview dialogues</small></h1>
+<section id="voice"></section>
+<section id="scenario-menu" class="scenarios"></section>
+<section class="controls sticky">
+  <select id="role" aria-label="Role">
+    <option value="both">Listen to both</option>
+    <option value="A">I play A</option>
+    <option value="B">I play B</option>
+  </select>
+  <label class="inline"><input type="checkbox" id="hide-mine"> Hide my lines</label>
+  <button class="btn" id="play-dialogue" type="button">▶ Play</button>
+  <button class="btn warn" id="stop" type="button">■ Stop</button>
+  <span id="run-status" class="muted" aria-live="polite"></span>
+</section>
+<section id="stage"></section>
+</main>
+<footer class="foot muted">Practice tool. Audio uses your browser's built-in Cantonese voice (Web Speech API). Progress is stored only in this browser.</footer>
+<script src="data/categories.js"></script>
+<script src="data/sentences.js"></script>
+<script src="data/dialogues.js"></script>
+<script src="js/store.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/dialogues.js"></script>
+</body>
+</html>

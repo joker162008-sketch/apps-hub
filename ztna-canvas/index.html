@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>零信任架构画布 · ztna-canvas</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="brand">零信任架构画布 <small>ztna-canvas v0.1</small></div>
+    <label class="title-field">标题 <input id="title-input" maxlength="60" aria-label="画布标题"></label>
+    <div class="actions">
+      <button id="btn-new" type="button">新建</button>
+      <select id="preset-select" aria-label="载入预设模板"><option value="">载入预设模板…</option></select>
+      <button id="btn-undo" type="button" title="Ctrl+Z">撤销</button>
+      <span class="sep"></span>
+      <button id="btn-import" type="button">导入 JSON</button>
+      <input id="file-import" type="file" accept=".json,application/json" hidden>
+      <button id="btn-export-json" type="button">导出 JSON</button>
+      <button id="btn-export-svg" type="button">导出 SVG</button>
+      <button id="btn-export-png" type="button">导出 PNG</button>
+      <button id="btn-export-md" type="button" class="primary">导出设计说明 (Markdown)</button>
+    </div>
+  </header>
+  <main class="layout">
+    <aside class="palette" id="palette" aria-label="组件库">
+      <h2>组件库</h2>
+      <p class="hint">拖动组件到画布；也可点击直接添加。拖动组件右侧圆点到另一组件即可连线。</p>
+      <div id="palette-groups"></div>
+    </aside>
+    <section class="canvas-wrap" id="canvas-wrap" aria-label="画布">
+      <div id="canvas" class="canvas"></div>
+    </section>
+    <aside class="side">
+      <section class="panel">
+        <h2>属性</h2>
+        <div id="props"></div>
+      </section>
+      <section class="panel">
+        <h2>检查提示 <span id="findings-count" class="count"></span></h2>
+        <ul id="findings" class="findings"></ul>
+      </section>
+      <section class="panel grow">
+        <h2>设计说明预览 <span id="consistency-badge" class="badge"></span></h2>
+        <pre id="notes-preview" class="notes"></pre>
+      </section>
+    </aside>
+  </main>
+  <footer class="status"><span id="status-counts"></span><span id="status-msg" role="status" aria-live="polite"></span></footer>
+  <script src="js/core/util.js"></script>
+  <script src="js/core/catalog.js"></script>
+  <script src="js/core/geometry.js"></script>
+  <script src="js/core/model.js"></script>
+  <script src="js/core/analysis.js"></script>
+  <script src="js/core/notes.js"></script>
+  <script src="js/core/svg.js"></script>
+  <script src="js/core/consistency.js"></script>
+  <script src="js/core/presets.js"></script>
+  <script src="js/ui/png.js"></script>
+  <script src="js/ui/app.js"></script>
+</body>
+</html>

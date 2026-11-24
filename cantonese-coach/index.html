@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Home · Cantonese Coach</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">廣東話 Coach</a>
+  <nav>
+    <a href="daily.html">每日 Daily</a>
+    <a href="dialogues.html">對話 Dialogues</a>
+    <a href="bank.html">句庫 Bank</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <h1>Workplace Cantonese for IT interviews</h1>
+  <p>Daily speaking practice aimed at Hong Kong IT manager interviews: <span id="bank-size"></span> workplace sentences, <span id="dialogue-count"></span> interview dialogues, read-along and repeat-after-me with your phone's built-in Cantonese voice.</p>
+  <div class="cta">
+    <a class="btn big" href="daily.html">▶ Start today's 10</a>
+    <a class="btn big ghost" href="dialogues.html">Interview dialogues</a>
+  </div>
+</section>
+<section id="voice"></section>
+<section>
+  <h2>Progress</h2>
+  <div id="stats"></div>
+</section>
+<section class="notes">
+  <h2>How to practise</h2>
+  <ol>
+    <li><b>Daily</b>: listen with read-along, then switch to <i>Repeat after me</i> and say each sentence in the pause. Rate yourself 識講 (got it) or 再練 (again) — "again" sentences come back in later days.</li>
+    <li><b>Dialogues</b>: play the full script, then choose <i>I play B</i> to rehearse the candidate side out loud.</li>
+    <li><b>Bank</b>: search all sentences by Chinese, Jyutping, Mandarin or English.</li>
+  </ol>
+  <p class="muted">Sample answers use a fictional candidate, 陳大文 (the Hong Kong placeholder name), with sample figures. Replace names, years, salaries and incidents with your own real experience before an interview.</p>
+</section>
+<section>
+  <h2>Your data</h2>
+  <p class="muted">Progress lives in this browser's localStorage. Export it to keep a backup or move to another device.</p>
+  <div class="actions">
+    <button class="btn ghost" id="export" type="button">Export progress</button>
+    <label class="btn ghost file">Import progress<input id="import" type="file" accept="application/json,.json"></label>
+    <button class="btn warn" id="reset" type="button">Reset</button>
+  </div>
+</section>
+</main>
+<footer class="foot muted">Practice tool. Audio uses your browser's built-in Cantonese voice (Web Speech API). Progress is stored only in this browser.</footer>
+<script src="data/categories.js"></script>
+<script src="data/sentences.js"></script>
+<script src="data/dialogues.js"></script>
+<script src="js/store.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

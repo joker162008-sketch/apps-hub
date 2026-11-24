@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的工具箱</title>
+<style>
+  :root { --bg: #f6f7f9; --card: #fff; --text: #1f2328; --muted: #5b6470; --accent: #2563eb; --border: #e3e6ea; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    line-height: 1.6; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { margin: 0 0 4px; font-size: 1.75rem; }
+  .sub { margin: 0 0 24px; color: var(--muted); font-size: 0.95rem; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  a.card { display: block; padding: 16px 18px; background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; color: inherit; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
+  a.card:hover, a.card:focus-visible { border-color: var(--accent); box-shadow: 0 2px 10px rgba(37, 99, 235, .12); outline: none; }
+  .name { display: block; font-size: 1.1rem; font-weight: 600; color: var(--accent); }
+  .note { display: block; margin-top: 2px; color: var(--muted); font-size: 0.95rem; }
+  footer { margin-top: 32px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>我的工具箱</h1>
+  <p class="sub">五个小工具，点开即用，手机电脑都可以。</p>
+  <ul>
+    <li><a class="card" href="cantonese-coach/"><span class="name">粤语训练器</span><span class="note">每天练一句粤语，可跟读朗读、查句库</span></a></li>
+    <li><a class="card" href="kids-science-quiz/"><span class="name">科学测验</span><span class="note">给孩子做的科学知识小测验，点开即玩</span></a></li>
+    <li><a class="card" href="podcast-website/"><span class="name">播客官网</span><span class="note">《四十岁，重新出发》节目页，在线收听各集</span></a></li>
+    <li><a class="card" href="interview-flashcards/"><span class="name">面试闪卡</span><span class="note">IT 面试知识点闪卡，翻卡自测、间隔复习</span></a></li>
+    <li><a class="card" href="ztna-canvas/"><span class="name">零信任画布</span><span class="note">在画布上拖拽组件，设计零信任架构图</span></a></li>
+  </ul>
+  <footer>我的工具箱</footer>
+</main>
+</body>
+</html>
